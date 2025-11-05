@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar />
+    <AppNavbar />
     <main>
       <HomeSection />
       <AboutSection />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Navbar from "./assets/components/Navbar.vue";
+import AppNavbar from "./assets/components/Navbar.vue";
 import HomeSection from "./assets/components/HomeSection.vue";
 import AboutSection from "./assets/components/AboutSection.vue";
 import ProjectsSection from "./assets/components/ProjectsSection.vue";
@@ -20,7 +20,7 @@ import ContactSection from "./assets/components/ContactSection.vue";
 export default {
   name: "App",
   components: {
-    Navbar,
+    AppNavbar,
     HomeSection,
     AboutSection,
     ProjectsSection,
