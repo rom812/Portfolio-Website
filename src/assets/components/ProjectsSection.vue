@@ -1,33 +1,45 @@
 <template>
   <section id="projects">
-    <h2>Selected Projects</h2>
+    <h2>Featured Project</h2>
     <div class="grid grid-cols-2">
       <article class="card">
-        <h3>Nova Analytics Platform</h3>
+        <h3>Delightful Bites · Generative AI Recipe Companion</h3>
         <p>
-          Built a modular analytics platform with real-time dashboards powered
-          by Vue 3, TypeScript, and D3.js. Implemented component-driven design
-          system and live collaboration features.
+          AI-powered platform that curates personalised meal plans and shopping
+          lists by blending LLM creativity with nutrition rules and pantry
+          constraints.
         </p>
+        <ul class="container">
+          <li>
+            <strong>Smart planning:</strong> Built multi-agent pipeline across
+            Python, Node.js, and Express to analyse user preferences, dietary
+            needs, and seasonal ingredients before crafting recipes.
+          </li>
+          <li>
+            <strong>Reliable delivery:</strong> Implemented observability and
+            evaluation layers that flag hallucinations, enforce ingredient
+            substitutions, and keep recommendations accurate.
+          </li>
+          <li>
+            <strong>Full-stack experience:</strong> Deployed modular services on
+            PostgreSQL and MongoDB with reusable REST APIs, automated testing,
+            and infrastructure as code.
+          </li>
+        </ul>
         <div class="project-links">
-          <a class="button" href="https://example.com" target="_blank" rel="noreferrer">
-            View Case Study
+          <a
+            class="button"
+            href="mailto:romsh21@gmail.com?subject=Delightful%20Bites%20Demo"
+          >
+            Request a Demo
           </a>
-          <a href="https://github.com/example" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </article>
-      <article class="card">
-        <h3>Aurora UI Kit</h3>
-        <p>
-          Created a reusable UI kit for enterprise web apps with storybook
-          documentation and accessibility-first components. Enabled teams to
-          ship interfaces 40% faster.
-        </p>
-        <div class="project-links">
-          <a class="button" href="https://example.com" target="_blank" rel="noreferrer">
-            View Live Demo
+          <a
+            href="https://github.com/romsheynis"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Profile
           </a>
-          <a href="https://github.com/example" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </article>
     </div>
