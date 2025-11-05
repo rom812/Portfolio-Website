@@ -1,14 +1,14 @@
 <template>
   <section id="about">
-    <h2>Profile Snapshot</h2>
-    <p>
+    <h2 class="animate-fade-in-up">Profile Snapshot</h2>
+    <p class="animate-fade-in-up delay-100">
       Detail-oriented builder who enjoys turning complex backend and AI
       challenges into dependable products. I draw on a solid foundation in
       computer science fundamentals, data-driven experimentation, and
       cross-functional teamwork to ship solutions that scale gracefully.
     </p>
     <div class="grid grid-cols-2">
-      <article class="card">
+      <article class="card animate-subtle-scale delay-200">
         <h3>Professional Experience</h3>
         <ul class="container">
           <li>
@@ -39,7 +39,7 @@
           </li>
         </ul>
       </article>
-      <article class="card">
+      <article class="card animate-subtle-scale delay-300">
         <h3>Education & Languages</h3>
         <ul class="container">
           <li>
@@ -57,7 +57,7 @@
           </li>
         </ul>
       </article>
-      <article class="card">
+      <article class="card animate-subtle-scale delay-400">
         <h3>Technical Toolbox</h3>
         <div class="skills-list">
           <span class="skill-pill">Python</span>
@@ -91,7 +91,7 @@
           <span class="skill-pill">Postman</span>
         </div>
       </article>
-      <article class="card">
+      <article class="card animate-subtle-scale delay-500">
         <h3>Key Highlights</h3>
         <ul class="container">
           <li>

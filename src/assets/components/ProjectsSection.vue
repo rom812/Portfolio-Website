@@ -1,8 +1,8 @@
 <template>
   <section id="projects">
-    <h2>Featured Project</h2>
+    <h2 class="animate-fade-in-up">Featured Project</h2>
     <div class="grid grid-cols-2">
-      <article class="card">
+      <article class="card animate-subtle-scale delay-100">
         <h3>Full-Stack Recipe Management Platform</h3>
         <p>
           A comprehensive full-stack recipe application built with modern web technologies,

@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   background-color: var(--bg-color);
@@ -75,12 +79,20 @@ ul {
   cursor: pointer;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease;
 }
 
 .button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(56, 189, 248, 0.4);
+  background-color: #0ea5e9;
+}
+
+.button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.3);
 }
 
 .grid {
@@ -101,6 +113,15 @@ ul {
   padding: 1.5rem;
   backdrop-filter: blur(6px);
   box-shadow: 0 20px 35px rgba(15, 23, 42, 0.55);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.7), 0 0 0 1px rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.2);
 }
 
 .card h3 {
@@ -117,11 +138,13 @@ ul {
   background: rgba(148, 163, 184, 0.1);
   border-radius: 999px;
   padding: 0.5rem 1rem;
-  transition: background 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-links a:hover {
   background: rgba(148, 163, 184, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.2);
 }
 
 .navbar {
@@ -151,11 +174,27 @@ ul {
 .nav-links a {
   color: var(--muted-color);
   font-weight: 600;
-  transition: color 0.2s ease;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover {
   color: var(--accent-color);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .brand {
@@ -180,6 +219,11 @@ ul {
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.1));
   border-radius: 1.5rem;
   height: 280px;
+  transition: transform 0.3s ease;
+}
+
+.hero-illustration:hover {
+  transform: scale(1.02);
 }
 
 .skills-list {
@@ -196,6 +240,14 @@ ul {
   padding: 0.35rem 0.85rem;
   font-weight: 600;
   font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-pill:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
 
 .project-links {
@@ -213,3 +265,63 @@ footer {
   padding: 2rem 0 1rem;
   color: rgba(148, 163, 184, 0.6);
 }
+
+/* === Animations === */
+
+/* Fade in and slide up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Subtle scale animation */
+@keyframes subtleScale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-subtle-scale {
+  animation: subtleScale 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Stagger delays for sequential animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
