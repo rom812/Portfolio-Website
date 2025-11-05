@@ -1,0 +1,28 @@
+<svg width="400" height="440" viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Stylized portrait illustration</title>
+  <desc id="desc">Abstract illustration of a person with circular background</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="40%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="shirtGradient" x1="0%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020617" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="440" rx="48" fill="url(#bgGradient)"/>
+  <ellipse cx="200" cy="360" rx="140" ry="42" fill="url(#shadowGradient)"/>
+  <circle cx="200" cy="160" r="86" fill="#1f2937"/>
+  <path d="M130 320c0-60 32-96 70-96h0c38 0 70 36 70 96v28H130z" fill="url(#shirtGradient)"/>
+  <path d="M200 100c-32 0-60 26-60 62 0 52 32 82 60 82s60-30 60-82c0-36-28-62-60-62z" fill="#f1f5f9"/>
+  <path d="M156 150c6-4 18-8 44-8s38 4 44 8v16c-9-6-23-10-44-10s-35 4-44 10z" fill="#e2e8f0"/>
+  <path d="M172 198c0 12 12 22 28 22s28-10 28-22c0 0-14 6-28 6s-28-6-28-6z" fill="#0ea5e9"/>
+  <path d="M168 182c4 4 14 10 32 10s28-6 32-10" stroke="#0f172a" stroke-width="4" stroke-linecap="round" opacity="0.25"/>
+  <path d="M152 162c8-6 12-18 12-28 0-20 16-36 36-36s36 16 36 36c0 10 4 22 12 28-8-36-27-58-48-58s-40 22-48 58z" fill="#1f2937"/>
+  <path d="M188 126c-8 0-12 4-12 10s4 10 12 10 12-4 12-10-4-10-12-10zm24 0c-8 0-12 4-12 10s4 10 12 10 12-4 12-10-4-10-12-10z" fill="#0f172a"/>
+</svg>

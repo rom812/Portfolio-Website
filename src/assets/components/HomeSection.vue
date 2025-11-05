@@ -16,7 +16,13 @@
           <a href="#contact">Let's collaborate</a>
         </div>
       </div>
-      <div class="hero-illustration animate-subtle-scale delay-400" aria-hidden="true"></div>
+      <figure class="hero-illustration animate-subtle-scale delay-400">
+        <img
+          src="@/assets/rom-portrait.svg"
+          alt="Stylized portrait illustration of Rom Sheynis"
+          loading="lazy"
+        />
+      </figure>
     </div>
   </section>
 </template>
