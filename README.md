@@ -78,6 +78,29 @@ This repository includes a GitHub Actions workflow (`.github/workflows/deploy.ym
 
 Because the production `publicPath` is configured for relative URLs, the deployed site will render correctly regardless of the GitHub Pages sub-path.
 
+### Accessing Your Deployed Website
+
+Once the GitHub Actions workflow has completed successfully, your portfolio website will be available at:
+
+```
+https://<your-username>.github.io/Portfolio-Website/
+```
+
+For this repository, the deployed site will be at:
+
+```
+https://rom812.github.io/Portfolio-Website/
+```
+
+**To find your deployment URL:**
+
+1. Go to your GitHub repository settings
+2. Navigate to **Pages** in the left sidebar
+3. Under "GitHub Pages", you'll see the published site URL
+4. Click "Visit site" to open your deployed portfolio
+
+You can also check the deployment status in the **Actions** tab of your repository. Each successful workflow run will show the deployment URL in the deploy job output.
+
 ## Customisation
 
 - Update the content in the Vue components under `src/assets/components/` with your own biography, projects, and contact details.
