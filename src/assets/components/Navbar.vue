@@ -1,7 +1,7 @@
 <template>
   <header class="navbar">
     <div class="content">
-      <a href="#home" class="brand">@vue-creative</a>
+      <a href="#home" class="brand">Rom Sheynis</a>
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>

@@ -3,11 +3,13 @@
     <div class="home-hero">
       <div>
         <p class="brand">Hi, I'm</p>
-        <h1>Jordan Lee — Frontend Engineer & Vue Enthusiast</h1>
+        <h1>Rom Sheynis — Backend-Focused IS & Software Engineering Student</h1>
         <p>
-          I create immersive digital experiences with clean aesthetics, smooth
-          interactions, and maintainable architecture. I specialise in building
-          Vue-based applications that delight users and empower teams.
+          Fourth-year Ben-Gurion University student with hands-on experience
+          building production-ready backend services, generative AI products, and
+          maintainable data pipelines. I love shaping resilient architectures
+          that combine clean code, measurable impact, and delightful user
+          experiences.
         </p>
         <div class="project-links">
           <a class="button" href="#projects">Explore Projects</a>
