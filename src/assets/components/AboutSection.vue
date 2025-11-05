@@ -12,21 +12,29 @@
         <h3>Professional Experience</h3>
         <ul class="container">
           <li>
-            <strong>Research Assistant · BGU LLM Lab</strong>
-            <p>Aug 2023 – Mar 2025 (expected)</p>
+            <strong>Research Assistant (LLM & AI) · Ben Gurion University</strong>
+            <p>March 2025 – August 2025</p>
             <p>
-              Designed LLM-based automation to stress-test model robustness,
-              engineered evaluation pipelines, and shipped observability dashboards
-              for prompt performance and hallucination tracking.
+              Researched LLM behavior under adversarial prompts, jailbreaks, and stress tests.
+              Built multi-agent simulations to test robustness, prompt injection, and memory manipulation.
+              Developed evaluation protocols for safety, consistency, and refusal using Python, AutoGen and OpenAI tools.
             </p>
           </li>
           <li>
-            <strong>Back-End Developer · Premium Clean Global</strong>
-            <p>2021 – 2023</p>
+            <strong>Clean room engineer · Quantum Clean Global - Israel</strong>
+            <p>2019 – 2021</p>
             <p>
-              Delivered production APIs and data pipelines that powered operations
-              in 6 countries, modernised legacy infrastructure, and implemented CI/CD
-              workflows that cut deployment time by 40%.
+              Handled high-value Intel semiconductor components in a clean room, ensuring usability via precise
+              micro-cleaning and repairs.
+            </p>
+          </li>
+          <li>
+            <strong>Avionics Technician · Nevatim Air Base, Israeli Air Force</strong>
+            <p>2017 – 2019</p>
+            <p>
+              Maintained avionics systems, including navigation and communication equipment, ensuring readiness
+              and efficiency. Contributed to the successful execution of missions by providing technical expertise and support for
+              critical aircraft systems. Successfully completed the Israeli Commanders Course (2018).
             </p>
           </li>
         </ul>
@@ -36,10 +44,11 @@
         <ul class="container">
           <li>
             <strong>B.Sc. Information Systems & Software Engineering</strong>
-            <p>Ben-Gurion University of the Negev · 2021 – Present</p>
+            <p>Ben-Gurion University of the Negev · 2022 – Present | GPA: 85</p>
             <p>
               Fourth-year student focusing on backend architectures, databases, and
               large language models with project-based learning across the stack.
+              Relevant Courses: Object Oriented Programming, Data Structures, AI, ML, Cybersecurity & Network Defense.
             </p>
           </li>
           <li>
@@ -52,19 +61,34 @@
         <h3>Technical Toolbox</h3>
         <div class="skills-list">
           <span class="skill-pill">Python</span>
-          <span class="skill-pill">FastAPI</span>
-          <span class="skill-pill">Django</span>
-          <span class="skill-pill">Node.js</span>
-          <span class="skill-pill">Express</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">Bash</span>
           <span class="skill-pill">SQL</span>
+          <span class="skill-pill">LangChain</span>
+          <span class="skill-pill">AutoGen</span>
+          <span class="skill-pill">RAG Pipelines</span>
+          <span class="skill-pill">OpenAI APIs</span>
+          <span class="skill-pill">MCP</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">FastAPI</span>
+          <span class="skill-pill">Flask</span>
           <span class="skill-pill">PostgreSQL</span>
-          <span class="skill-pill">MongoDB</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Vue 3</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">BeautifulSoup</span>
           <span class="skill-pill">Docker</span>
           <span class="skill-pill">Kubernetes</span>
-          <span class="skill-pill">CI/CD</span>
-          <span class="skill-pill">AWS</span>
-          <span class="skill-pill">GCP</span>
+          <span class="skill-pill">Railway</span>
+          <span class="skill-pill">AirFlow</span>
           <span class="skill-pill">Git</span>
+          <span class="skill-pill">Linux</span>
+          <span class="skill-pill">Wireshark</span>
+          <span class="skill-pill">Postman</span>
         </div>
       </article>
       <article class="card">

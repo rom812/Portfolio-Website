@@ -3,33 +3,30 @@
     <h2>Featured Project</h2>
     <div class="grid grid-cols-2">
       <article class="card">
-        <h3>Delightful Bites · Generative AI Recipe Companion</h3>
+        <h3>Full-Stack Recipe Management Platform</h3>
         <p>
-          AI-powered platform that curates personalised meal plans and shopping
-          lists by blending LLM creativity with nutrition rules and pantry
-          constraints.
+          A comprehensive full-stack recipe application built with modern web technologies,
+          featuring recipe discovery, user authentication, and personalized recipe management.
         </p>
         <ul class="container">
           <li>
-            <strong>Smart planning:</strong> Built multi-agent pipeline across
-            Python, Node.js, and Express to analyse user preferences, dietary
-            needs, and seasonal ingredients before crafting recipes.
+            <strong>Modern Tech Stack:</strong> Built with Vue 3 frontend and Node.js/Express backend,
+            utilizing MySQL/PostgreSQL databases for reliable data storage and management.
           </li>
           <li>
-            <strong>Reliable delivery:</strong> Implemented observability and
-            evaluation layers that flag hallucinations, enforce ingredient
-            substitutions, and keep recommendations accurate.
+            <strong>Rich Features:</strong> Integrated Spoonacular API for extensive recipe database,
+            implemented secure authentication, advanced search and filtering capabilities, favorites system,
+            and personal recipe management.
           </li>
           <li>
-            <strong>Full-stack experience:</strong> Deployed modular services on
-            PostgreSQL and MongoDB with reusable REST APIs, automated testing,
-            and infrastructure as code.
+            <strong>Professional Deployment:</strong> Dockerized backend for consistent deployment
+            and scalability, with REST API design following best practices.
           </li>
         </ul>
         <div class="project-links">
           <a
             class="button"
-            href="mailto:romsh21@gmail.com?subject=Delightful%20Bites%20Demo"
+            href="mailto:romsh12@gmail.com?subject=Recipe%20Platform%20Demo"
           >
             Request a Demo
           </a>

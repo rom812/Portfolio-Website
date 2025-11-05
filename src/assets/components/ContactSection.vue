@@ -7,8 +7,8 @@
       scaling APIs, or exploring internship opportunities, let's connect.
     </p>
     <div class="contact-links">
-      <a href="mailto:romsh21@gmail.com">romsh21@gmail.com</a>
-      <a href="tel:+972542106195">+972-54-210-6195</a>
+      <a href="mailto:romsh12@gmail.com">romsh12@gmail.com</a>
+      <a href="tel:+972542101696">054-2101696</a>
       <a
         href="https://www.linkedin.com/in/rom-sheynis"
         target="_blank"
