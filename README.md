@@ -83,10 +83,10 @@ Because the production `publicPath` is configured for relative URLs, the deploye
 Once the GitHub Actions workflow has completed successfully, your portfolio website will be available at:
 
 ```
-https://<your-username>.github.io/Portfolio-Website/
+https://<your-username>.github.io/<repository-name>/
 ```
 
-For this repository, the deployed site will be at:
+For example, if your GitHub username is `rom812` and your repository is named `Portfolio-Website`, the deployed site will be at:
 
 ```
 https://rom812.github.io/Portfolio-Website/
