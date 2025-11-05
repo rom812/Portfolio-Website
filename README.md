@@ -1,4 +1,4 @@
-# Vue Portfolio Website
+ # Vue Portfolio Website
 
 This project is a Vue.js-powered single-page portfolio showcasing professional experience, projects, and contact information. It is structured for use with the Vue CLI toolchain and provides a foundation for building and deploying a personal site.
 
