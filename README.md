@@ -52,9 +52,31 @@ portfolio-website/
 
    The compiled assets will be output to the `dist/` directory.
 
+4. **Preview the production build locally**
+
+   ```bash
+   npm run preview
+   ```
+
+   This command builds the site (if needed) and serves the `dist/` directory so you can verify the production output at `http://localhost:3000/`.
+
 ## Deployment
 
-Use the provided `deploy.sh` script as a reference for building the project prior to deployment. After running the script, upload the contents of the `dist/` directory to your hosting provider or configure your continuous deployment pipeline to do so automatically.
+Use the provided `deploy.sh` script as a reference for building the project prior to deployment. After running the script, upload the contents of the `dist/` directory to your hosting provider or configure your continuous deployment pipeline to do so automatically. You can pass the `--preview` flag to launch a local server for inspecting the built files:
+
+```bash
+./deploy.sh --preview
+```
+
+### GitHub Pages
+
+This repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that can publish the site to GitHub Pages whenever you push to the `main` branch.
+
+1. Enable GitHub Pages in your repository settings and select **GitHub Actions** as the source.
+2. Ensure that the `main` branch is your default branch.
+3. Push changes to `main` and the workflow will build the project and deploy the `dist/` output to Pages automatically.
+
+Because the production `publicPath` is configured for relative URLs, the deployed site will render correctly regardless of the GitHub Pages sub-path.
 
 ## Customisation
 
