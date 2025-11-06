@@ -62,7 +62,7 @@
             Request a Demo
           </a>
           <a
-            href="https://github.com/romsheynis"
+            href="https://github.com/rom812"
             target="_blank"
             rel="noreferrer"
           >
@@ -93,7 +93,7 @@
         <div class="project-links">
           <a
             class="button"
-            href="https://github.com/romsheynis/spotify-hit-predictor"
+            href="https://github.com/rom812/Spotify-Popularity-Predictive-Model"
             target="_blank"
             rel="noreferrer"
           >
