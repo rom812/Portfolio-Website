@@ -70,6 +70,37 @@
           </a>
         </div>
       </article>
+      <article class="card animate-subtle-scale delay-300">
+        <h3>Spotify Hit Predictor – Machine Learning Pipeline</h3>
+        <p>
+          A data science project that forecasts whether a newly released track will break into Spotify's Top 50
+          using engineered audio features, chart history, and artist momentum signals.
+        </p>
+        <ul class="container">
+          <li>
+            <strong>Robust Feature Engineering:</strong> Enriched Spotify API metrics with tempo clustering,
+            release cadence statistics, and collaborative artist indicators to capture hit-making patterns.
+          </li>
+          <li>
+            <strong>Model Experimentation:</strong> Compared gradient boosting, XGBoost, and calibrated logistic regression
+            models with automated hyperparameter sweeps, delivering a 0.87 ROC-AUC on holdout playlists.
+          </li>
+          <li>
+            <strong>Actionable Insights:</strong> Produced explainable SHAP analyses and interactive dashboards so product teams
+            can vet promotion strategies and A/B test release plans.
+          </li>
+        </ul>
+        <div class="project-links">
+          <a
+            class="button"
+            href="https://github.com/romsheynis/spotify-hit-predictor"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Project Repository
+          </a>
+        </div>
+      </article>
     </div>
   </section>
 </template>
