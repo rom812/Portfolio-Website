@@ -73,21 +73,21 @@
       <article class="card animate-subtle-scale delay-300">
         <h3>Spotify Hit Predictor – Machine Learning Pipeline</h3>
         <p>
-          A data science project that forecasts whether a newly released track will break into Spotify's Top 50
-          using engineered audio features, chart history, and artist momentum signals.
+          Compact end-to-end pipeline that estimates a track's chance of entering Spotify's Top 50 by pairing audio DNA with
+          artist momentum and release cadence signals.
         </p>
         <ul class="container">
           <li>
-            <strong>Robust Feature Engineering:</strong> Enriched Spotify API metrics with tempo clustering,
-            release cadence statistics, and collaborative artist indicators to capture hit-making patterns.
+            <strong>Curated Feature Suite:</strong> Blends Spotify audio descriptors with collaboration ratios, drop frequency,
+            and listener trend deltas surfaced in the project README.
           </li>
           <li>
-            <strong>Model Experimentation:</strong> Compared gradient boosting, XGBoost, and calibrated logistic regression
-            models with automated hyperparameter sweeps, delivering a 0.87 ROC-AUC on holdout playlists.
+            <strong>Trusted Modeling Stack:</strong> Benchmarks gradient boosting, XGBoost, and calibrated logistic models with
+            cross-validation and ROC-AUC tracking baked into the notebooks.
           </li>
           <li>
-            <strong>Actionable Insights:</strong> Produced explainable SHAP analyses and interactive dashboards so product teams
-            can vet promotion strategies and A/B test release plans.
+            <strong>Product-Ready Insights:</strong> Ships SHAP explainability, launch recommendation dashboards, and a
+            documented retraining workflow for marketing teams.
           </li>
         </ul>
         <div class="project-links">
