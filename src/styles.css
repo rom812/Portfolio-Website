@@ -244,45 +244,55 @@ ul {
 
 .home-hero {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
+}
+
+.home-hero > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 @media (min-width: 900px) {
   .home-hero {
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
   }
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.subtitle {
+  color: rgba(226, 232, 240, 0.85);
+  font-size: clamp(1rem, 1vw + 0.95rem, 1.25rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  max-width: 560px;
 }
 
 .hero-illustration {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  background:
-    linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.05));
-  box-shadow: 0 30px 60px rgba(2, 6, 23, 0.45);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  min-height: 320px;
-  max-width: 420px;
+  width: min(100%, 400px);
+  aspect-ratio: 1;
   margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-illustration:hover {
   transform: translateY(-4px);
-  box-shadow: 0 36px 72px rgba(2, 6, 23, 0.6);
 }
 
 .hero-illustration img {
-  width: min(100%, 300px);
-  height: min(100%, 300px);
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.35),
-              0 0 0 4px rgba(56, 189, 248, 0.2);
-  border: 3px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 24px 55px rgba(2, 6, 23, 0.55);
 }
 
 .skills-list {
@@ -313,6 +323,7 @@ ul {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .status-badge {
