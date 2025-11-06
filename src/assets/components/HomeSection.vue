@@ -11,8 +11,8 @@
         </p>
         <div class="project-links animate-fade-in-up delay-300">
           <a class="button" href="#projects">Explore Projects</a>
-          <a class="button secondary" href="/Rom_Sheynis_CV.pdf" download>Download CV</a>
-          <a href="#contact">Let's collaborate</a>
+          <a class="button secondary" href="./Rom_Sheynis_CV.pdf" download="Rom_Sheynis_CV.pdf">Download CV</a>
+          <a class="button secondary" href="#contact">Let's Collaborate</a>
         </div>
       </div>
       <figure class="hero-illustration animate-subtle-scale delay-400">
