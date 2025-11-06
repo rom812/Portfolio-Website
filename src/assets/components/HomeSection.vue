@@ -3,23 +3,22 @@
     <div class="home-hero">
       <div>
         <p class="brand animate-fade-in">Hi, I'm</p>
-        <h1 class="animate-fade-in-up delay-100">Rom Sheynis — Backend-Focused IS & Software Engineering Student</h1>
+        <h1 class="animate-fade-in-up delay-100">Rom Sheynis — Software Developer</h1>
         <p class="animate-fade-in-up delay-200">
-          Fourth-year Ben-Gurion University student with hands-on experience
-          building production-ready backend services, generative AI products, and
-          maintainable data pipelines. I love shaping resilient architectures
-          that combine clean code, measurable impact, and delightful user
-          experiences.
+          Software developer specializing in backend engineering, generative AI, and data-driven systems.
+          I build production-ready services and maintainable data pipelines that combine clean code,
+          measurable impact, and scalable architectures.
         </p>
         <div class="project-links animate-fade-in-up delay-300">
           <a class="button" href="#projects">Explore Projects</a>
+          <a class="button secondary" href="/Rom_Sheynis_CV.pdf" download>Download CV</a>
           <a href="#contact">Let's collaborate</a>
         </div>
       </div>
       <figure class="hero-illustration animate-subtle-scale delay-400">
         <img
-          src="@/assets/rom-portrait.svg"
-          alt="Stylized portrait illustration of Rom Sheynis"
+          src="@/assets/rom-profile.jpeg"
+          alt="Rom Sheynis - Software Developer"
           loading="lazy"
         />
       </figure>

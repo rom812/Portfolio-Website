@@ -46,9 +46,9 @@
             <strong>B.Sc. Information Systems & Software Engineering</strong>
             <p>Ben-Gurion University of the Negev · 2022 – Present | GPA: 85</p>
             <p>
-              Fourth-year student focusing on backend architectures, databases, and
-              large language models with project-based learning across the stack.
-              Relevant Courses: Object Oriented Programming, Data Structures, AI, ML, Cybersecurity & Network Defense.
+              Focused on backend architectures, databases, and large language models
+              with comprehensive coursework in Object Oriented Programming, Data Structures, AI, ML,
+              Cybersecurity & Network Defense.
             </p>
           </li>
           <li>
