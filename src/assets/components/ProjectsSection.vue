@@ -1,8 +1,39 @@
 <template>
   <section id="projects">
-    <h2 class="animate-fade-in-up">Featured Project</h2>
+    <h2 class="animate-fade-in-up">Featured Projects</h2>
     <div class="grid grid-cols-2">
       <article class="card animate-subtle-scale delay-100">
+        <h3>Study Pal – AI-Powered Study Assistant <span class="status-badge">In Progress</span></h3>
+        <p>
+          An intelligent multi-agent system that orchestrates smart scheduling, adaptive tutoring, and personalized motivation
+          to create a comprehensive AI-driven study companion.
+        </p>
+        <ul class="container">
+          <li>
+            <strong>Multi-Agent Architecture:</strong> Built with LangChain and LangGraph to coordinate three specialized agents:
+            Scheduler (time management), Motivator (personalized inspiration), and Tutor (adaptive learning with RAG).
+          </li>
+          <li>
+            <strong>Advanced AI Integration:</strong> Implements RAG pipeline with ChromaDB/Pinecone for vector storage,
+            PDF ingestion, intelligent quizzes, and real-time feedback loops. Uses OpenAI APIs for natural language understanding.
+          </li>
+          <li>
+            <strong>Smart Integrations:</strong> Connects with Google Calendar and Gmail via Model Context Protocol (MCP)
+            for automated scheduling and reminders. Includes comprehensive Pydantic validation and pytest coverage.
+          </li>
+        </ul>
+        <div class="project-links">
+          <a
+            class="button"
+            href="https://github.com/rom812/study-pal"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
+      <article class="card animate-subtle-scale delay-200">
         <h3>Full-Stack Recipe Management Platform</h3>
         <p>
           A comprehensive full-stack recipe application built with modern web technologies,
