@@ -12,6 +12,16 @@
         <h3>Professional Experience</h3>
         <ul class="container">
           <li>
+            <strong>BIM Automation Developer · 360 Program, Civil & Environmental Engineering Dept.</strong>
+            <p>October 2025</p>
+            <p>
+              Architected an AI-powered assistant enabling natural-language interaction with complex Revit models.
+              Built a conversational interface triggering Revit API operations through tool-based orchestration.
+              Designed and implemented C# middleware ("Semantic Wrappers") improving reliability and reducing incorrect outputs by ~90%.
+              Implemented grounding pipelines and spatial reasoning logic supporting automated compliance validation.
+            </p>
+          </li>
+          <li>
             <strong>Research Assistant (LLM & AI) · Ben Gurion University</strong>
             <p>March 2025 – August 2025</p>
             <p>
@@ -63,15 +73,19 @@
           <span class="skill-pill">Python</span>
           <span class="skill-pill">Java</span>
           <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">C#</span>
+          <span class="skill-pill">.NET</span>
           <span class="skill-pill">C</span>
           <span class="skill-pill">C++</span>
           <span class="skill-pill">Bash</span>
           <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Revit API</span>
           <span class="skill-pill">LangChain</span>
           <span class="skill-pill">AutoGen</span>
           <span class="skill-pill">RAG Pipelines</span>
           <span class="skill-pill">OpenAI APIs</span>
           <span class="skill-pill">MCP</span>
+          <span class="skill-pill">Tool Orchestration</span>
           <span class="skill-pill">Node.js</span>
           <span class="skill-pill">Express.js</span>
           <span class="skill-pill">FastAPI</span>
@@ -113,6 +127,27 @@
             <p>
               Implement monitoring, logging, and testing practices that keep
               systems reliable even under rapid iteration.
+            </p>
+          </li>
+        </ul>
+      </article>
+      <article class="card animate-subtle-scale delay-600">
+        <h3>Community & Engagement</h3>
+        <ul class="container">
+          <li>
+            <strong>Agents Community - Tel Aviv</strong>
+            <p>
+              Active member of the "Agents" community in Tel Aviv, where we regularly meet up to discuss
+              the latest tech stacks, methodologies, and AI agent architectures. Contributing to knowledge
+              sharing and staying at the forefront of AI development trends.
+            </p>
+          </li>
+          <li>
+            <strong>Meetups & Conferences</strong>
+            <p>
+              Actively participating in tech meetups and conferences throughout Tel Aviv, engaging with
+              the local tech community, sharing knowledge, and learning from industry leaders in AI,
+              backend engineering, and software development.
             </p>
           </li>
         </ul>

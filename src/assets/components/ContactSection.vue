@@ -10,13 +10,13 @@
       <a href="mailto:romsh12@gmail.com">romsh12@gmail.com</a>
       <a href="tel:+972542101696">054-2101696</a>
       <a
-        href="https://www.linkedin.com/in/rom-sheynis-214bb919a/"
+        href="https://www.linkedin.com/in/rom-sheynis"
         target="_blank"
         rel="noreferrer"
       >
         LinkedIn
       </a>
-      <a href="https://github.com/rom812" target="_blank" rel="noreferrer">
+      <a href="https://github.com/romsheynis" target="_blank" rel="noreferrer">
         GitHub
       </a>
     </div>
