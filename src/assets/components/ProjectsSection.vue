@@ -2,6 +2,46 @@
   <section id="projects">
     <h2 class="animate-fade-in-up">Featured Projects</h2>
     <div class="grid grid-cols-2">
+      <article class="card animate-subtle-scale delay-50">
+        <h3>Twin - AI Digital Twin <span class="ai-badge">AWS Bedrock</span></h3>
+        <p>
+          An AI-powered digital twin deployed on AWS Bedrock that represents me through advanced
+          language models. This project showcases cutting-edge AI deployment on cloud infrastructure,
+          demonstrating real-time conversational capabilities and personalized AI interactions.
+        </p>
+        <ul class="container">
+          <li>
+            <strong>AWS Bedrock Integration:</strong> Leverages Amazon Bedrock for scalable, production-ready
+            AI model deployment with managed infrastructure and enterprise-grade reliability.
+          </li>
+          <li>
+            <strong>Advanced AI Capabilities:</strong> Implements sophisticated language understanding,
+            context management, and personalized responses using state-of-the-art foundation models.
+          </li>
+          <li>
+            <strong>Cloud Architecture:</strong> Built with modern cloud-native principles, ensuring
+            scalability, security, and optimal performance for AI workloads.
+          </li>
+        </ul>
+        <div class="project-links">
+          <a
+            class="button"
+            href="https://github.com/rom812/twin"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on GitHub
+          </a>
+          <a
+            class="button secondary"
+            href="https://d2ckx9q1w19fw1.cloudfront.net/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Try Live Demo
+          </a>
+        </div>
+      </article>
       <article class="card animate-subtle-scale delay-100">
         <h3>Study Pal – AI-Powered Study Assistant <span class="status-badge">In Progress</span></h3>
         <p>
@@ -62,42 +102,11 @@
             Request a Demo
           </a>
           <a
-            href="https://github.com/rom812"
+            href="https://github.com/romsheynis"
             target="_blank"
             rel="noreferrer"
           >
             GitHub Profile
-          </a>
-        </div>
-      </article>
-      <article class="card animate-subtle-scale delay-300">
-        <h3>Spotify Hit Predictor – Machine Learning Pipeline</h3>
-        <p>
-          Compact end-to-end pipeline that estimates a track's chance of entering Spotify's Top 50 by pairing audio DNA with
-          artist momentum and release cadence signals.
-        </p>
-        <ul class="container">
-          <li>
-            <strong>Curated Feature Suite:</strong> Blends Spotify audio descriptors with collaboration ratios, drop frequency,
-            and listener trend deltas surfaced in the project README.
-          </li>
-          <li>
-            <strong>Trusted Modeling Stack:</strong> Benchmarks gradient boosting, XGBoost, and calibrated logistic models with
-            cross-validation and ROC-AUC tracking baked into the notebooks.
-          </li>
-          <li>
-            <strong>Product-Ready Insights:</strong> Ships SHAP explainability, launch recommendation dashboards, and a
-            documented retraining workflow for marketing teams.
-          </li>
-        </ul>
-        <div class="project-links">
-          <a
-            class="button"
-            href="https://github.com/rom812/Spotify-Popularity-Predictive-Model"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Project Repository
           </a>
         </div>
       </article>
