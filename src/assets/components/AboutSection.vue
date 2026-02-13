@@ -137,9 +137,11 @@
           <li>
             <strong>Agents Community - Tel Aviv</strong>
             <p>
-              Active member of the "Agents" community in Tel Aviv, where we regularly meet up to discuss
-              the latest tech stacks, methodologies, and AI agent architectures. Contributing to knowledge
-              sharing and staying at the forefront of AI development trends.
+              Active member of "Agents", a Gen AI community in Tel Aviv consisting of skilled AI engineers
+              who are either senior professionals or use AI as a hobby. I regularly attend meetups in Tel Aviv
+              where we discuss project dilemmas, share technical challenges, and learn from each other's experiences.
+              This community has been invaluable for staying current with AI trends and getting expert feedback
+              on my projects.
             </p>
           </li>
           <li>

@@ -110,6 +110,37 @@
           </a>
         </div>
       </article>
+      <article class="card animate-subtle-scale delay-300">
+        <h3>CareerAssist - Enterprise AI Career Platform <span class="ai-badge">AWS Serverless</span></h3>
+        <p>
+          A production-ready, multi-agent AI system built on AWS serverless architecture to help job seekers
+          optimize their careers through intelligent CV analysis, interview preparation, and application tracking.
+        </p>
+        <ul class="container">
+          <li>
+            <strong>Multi-Agent Architecture:</strong> Six specialized AI agents (Orchestrator, Extractor, Analyzer,
+            Interviewer, Charter, Researcher) coordinating via event-driven orchestration using SQS queues and AWS Lambda.
+          </li>
+          <li>
+            <strong>AWS Serverless Infrastructure:</strong> Built with Lambda, App Runner, SageMaker, Bedrock (Nova Pro),
+            Aurora Serverless v2, and custom S3-based vector storage for cost-effective RAG capabilities.
+          </li>
+          <li>
+            <strong>Enterprise Features:</strong> CV optimization with ATS-friendly rewrites, gap analysis with fit scoring,
+            interview preparation, application tracking analytics, and automated job discovery using Playwright MCP for web scraping.
+          </li>
+        </ul>
+        <div class="project-links">
+          <a
+            class="button"
+            href="https://github.com/rom812/CareerAssist"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
     </div>
   </section>
 </template>
