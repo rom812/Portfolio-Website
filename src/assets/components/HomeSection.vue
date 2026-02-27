@@ -3,7 +3,10 @@
     <div class="home-hero">
       <div ref="heroContent">
         <p class="brand" ref="brandText">Hi, I'm</p>
-        <h1 ref="heroTitle">Rom Sheynis — Software Developer</h1>
+        <h1 ref="heroTitle">Rom Sheynis</h1>
+        <p class="typewriter-line" ref="typewriterLine">
+          <span class="typewriter-text">{{ displayedText }}<span class="typewriter-cursor">|</span></span>
+        </p>
         <p ref="heroDescription">
           Software developer specializing in backend engineering, generative AI, and data-driven systems.
           I build production-ready services and maintainable data pipelines that combine clean code,
@@ -27,7 +30,7 @@
 </template>
 
 <script>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useGSAP } from "@/composables/useGSAP";
 import { useMouseParallax } from "@/composables/useMouseParallax";
 import { gsap } from "gsap";
@@ -41,7 +44,46 @@ export default {
     const heroDescription = ref(null);
     const heroButtons = ref(null);
     const heroImage = ref(null);
-    
+    const typewriterLine = ref(null);
+
+    // Typewriter state
+    const roles = [
+      "Backend Developer",
+      "AI Engineer",
+      "Infrastructure Builder",
+      "Data Pipeline Architect",
+    ];
+    const displayedText = ref("");
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typewriterTimer = null;
+
+    const typewriterTick = () => {
+      const currentRole = roles[roleIndex];
+
+      if (!isDeleting) {
+        displayedText.value = currentRole.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex >= currentRole.length) {
+          isDeleting = true;
+          typewriterTimer = setTimeout(typewriterTick, 1800);
+          return;
+        }
+        typewriterTimer = setTimeout(typewriterTick, 80);
+      } else {
+        displayedText.value = currentRole.slice(0, charIndex - 1);
+        charIndex--;
+        if (charIndex <= 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          typewriterTimer = setTimeout(typewriterTick, 400);
+          return;
+        }
+        typewriterTimer = setTimeout(typewriterTick, 40);
+      }
+    };
+
     const { mouseX, mouseY } = useMouseParallax();
     useGSAP();
 
@@ -107,6 +149,9 @@ export default {
         });
       }
 
+      // Start typewriter after title animation completes
+      setTimeout(typewriterTick, 1000);
+
       // Enhanced hover effect for buttons
       const buttons = heroButtons.value?.querySelectorAll('.button');
       buttons?.forEach((button) => {
@@ -127,6 +172,10 @@ export default {
       });
     });
 
+    onUnmounted(() => {
+      if (typewriterTimer) clearTimeout(typewriterTimer);
+    });
+
     return {
       heroContent,
       brandText,
@@ -134,7 +183,9 @@ export default {
       heroDescription,
       heroButtons,
       heroImage,
+      typewriterLine,
       imageStyle,
+      displayedText,
     };
   },
 };
