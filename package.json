@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "core-js": "^3.35.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.8",

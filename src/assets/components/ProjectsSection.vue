@@ -1,143 +1,59 @@
 <template>
   <section id="projects">
-    <h2 class="animate-fade-in-up">Featured Projects</h2>
-    <div class="grid grid-cols-2">
-      <article class="card animate-subtle-scale delay-50">
-        <h3>Twin - AI Digital Twin <span class="ai-badge">AWS Bedrock</span></h3>
-        <p>
-          An AI-powered digital twin deployed on AWS Bedrock that represents me through advanced
-          language models. This project showcases cutting-edge AI deployment on cloud infrastructure,
-          demonstrating real-time conversational capabilities and personalized AI interactions.
-        </p>
-        <ul class="container">
-          <li>
-            <strong>AWS Bedrock Integration:</strong> Leverages Amazon Bedrock for scalable, production-ready
-            AI model deployment with managed infrastructure and enterprise-grade reliability.
-          </li>
-          <li>
-            <strong>Advanced AI Capabilities:</strong> Implements sophisticated language understanding,
-            context management, and personalized responses using state-of-the-art foundation models.
-          </li>
-          <li>
-            <strong>Cloud Architecture:</strong> Built with modern cloud-native principles, ensuring
-            scalability, security, and optimal performance for AI workloads.
-          </li>
-        </ul>
-        <div class="project-links">
-          <a
-            class="button"
-            href="https://github.com/rom812/twin"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on GitHub
-          </a>
-          <a
-            class="button secondary"
-            href="https://d2ckx9q1w19fw1.cloudfront.net/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Try Live Demo
-          </a>
+    <h2 ref="sectionTitle">Featured Projects</h2>
+    <p ref="sectionDescription">
+      A selection of projects that reflect my focus on backend engineering,
+      generative AI, and building products that solve real problems.
+    </p>
+
+    <div class="filter-buttons" ref="filterButtons">
+      <button
+        v-for="cat in categories"
+        :key="cat"
+        class="filter-btn"
+        :class="{ active: activeFilter === cat }"
+        @click="setFilter(cat)"
+      >
+        {{ cat }}
+      </button>
+    </div>
+
+    <div class="grid grid-cols-3" ref="projectGrid">
+      <article
+        v-for="project in filteredProjects"
+        :key="project.title"
+        class="card project-card"
+        :ref="(el) => el && projectRefs.push(el)"
+      >
+        <div class="card-header">
+          <h3>{{ project.title }}</h3>
+          <span v-if="project.aiBadge" class="ai-badge">AI</span>
+          <span v-if="project.status === 'In Progress'" class="status-badge">In Progress</span>
         </div>
-      </article>
-      <article class="card animate-subtle-scale delay-100">
-        <h3>Study Pal – AI-Powered Study Assistant <span class="status-badge">In Progress</span></h3>
-        <p>
-          An intelligent multi-agent system that orchestrates smart scheduling, adaptive tutoring, and personalized motivation
-          to create a comprehensive AI-driven study companion.
-        </p>
-        <ul class="container">
-          <li>
-            <strong>Multi-Agent Architecture:</strong> Built with LangChain and LangGraph to coordinate three specialized agents:
-            Scheduler (time management), Motivator (personalized inspiration), and Tutor (adaptive learning with RAG).
-          </li>
-          <li>
-            <strong>Advanced AI Integration:</strong> Implements RAG pipeline with ChromaDB/Pinecone for vector storage,
-            PDF ingestion, intelligent quizzes, and real-time feedback loops. Uses OpenAI APIs for natural language understanding.
-          </li>
-          <li>
-            <strong>Smart Integrations:</strong> Connects with Google Calendar and Gmail via Model Context Protocol (MCP)
-            for automated scheduling and reminders. Includes comprehensive Pydantic validation and pytest coverage.
-          </li>
-        </ul>
-        <div class="project-links">
-          <a
-            class="button"
-            href="https://github.com/rom812/study-pal"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View on GitHub
-          </a>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="tech-stack">
+          <span v-for="tech in project.tech" :key="tech" class="skill-pill small">
+            {{ tech }}
+          </span>
         </div>
-      </article>
-      <article class="card animate-subtle-scale delay-200">
-        <h3>Full-Stack Recipe Management Platform</h3>
-        <p>
-          A comprehensive full-stack recipe application built with modern web technologies,
-          featuring recipe discovery, user authentication, and personalized recipe management.
-        </p>
-        <ul class="container">
-          <li>
-            <strong>Modern Tech Stack:</strong> Built with Vue 3 frontend and Node.js/Express backend,
-            utilizing MySQL/PostgreSQL databases for reliable data storage and management.
-          </li>
-          <li>
-            <strong>Rich Features:</strong> Integrated Spoonacular API for extensive recipe database,
-            implemented secure authentication, advanced search and filtering capabilities, favorites system,
-            and personal recipe management.
-          </li>
-          <li>
-            <strong>Professional Deployment:</strong> Dockerized backend for consistent deployment
-            and scalability, with REST API design following best practices.
-          </li>
-        </ul>
-        <div class="project-links">
+        <div class="card-links">
           <a
-            class="button"
-            href="mailto:romsh12@gmail.com?subject=Recipe%20Platform%20Demo"
-          >
-            Request a Demo
-          </a>
-          <a
-            href="https://github.com/romsheynis"
+            v-if="project.github"
+            :href="project.github"
             target="_blank"
             rel="noreferrer"
+            class="button secondary small"
           >
-            GitHub Profile
+            GitHub
           </a>
-        </div>
-      </article>
-      <article class="card animate-subtle-scale delay-300">
-        <h3>CareerAssist - Enterprise AI Career Platform <span class="ai-badge">AWS Serverless</span></h3>
-        <p>
-          A production-ready, multi-agent AI system built on AWS serverless architecture to help job seekers
-          optimize their careers through intelligent CV analysis, interview preparation, and application tracking.
-        </p>
-        <ul class="container">
-          <li>
-            <strong>Multi-Agent Architecture:</strong> Six specialized AI agents (Orchestrator, Extractor, Analyzer,
-            Interviewer, Charter, Researcher) coordinating via event-driven orchestration using SQS queues and AWS Lambda.
-          </li>
-          <li>
-            <strong>AWS Serverless Infrastructure:</strong> Built with Lambda, App Runner, SageMaker, Bedrock (Nova Pro),
-            Aurora Serverless v2, and custom S3-based vector storage for cost-effective RAG capabilities.
-          </li>
-          <li>
-            <strong>Enterprise Features:</strong> CV optimization with ATS-friendly rewrites, gap analysis with fit scoring,
-            interview preparation, application tracking analytics, and automated job discovery using Playwright MCP for web scraping.
-          </li>
-        </ul>
-        <div class="project-links">
           <a
-            class="button"
-            href="https://github.com/rom812/CareerAssist"
+            v-if="project.demo"
+            :href="project.demo"
             target="_blank"
             rel="noreferrer"
+            class="button small"
           >
-            View on GitHub
+            Live Demo
           </a>
         </div>
       </article>
@@ -146,7 +62,173 @@
 </template>
 
 <script>
+import { ref, computed, onMounted, onBeforeUpdate } from "vue";
+import { useGSAP } from "@/composables/useGSAP";
+import { gsap } from "gsap";
+
 export default {
   name: "ProjectsSection",
+  setup() {
+    const sectionTitle = ref(null);
+    const sectionDescription = ref(null);
+    const filterButtons = ref(null);
+    const projectGrid = ref(null);
+    const projectRefs = ref([]);
+    const activeFilter = ref("All");
+
+    const { fadeInUp } = useGSAP();
+
+    const categories = ["All", "AI / ML", "Full-Stack", "Academic"];
+
+    const projects = [
+      {
+        title: "AskRVT — AI-Powered BIM Assistant",
+        description:
+          "Architected an AI assistant enabling natural-language interaction with complex Revit BIM models. Built C# middleware ('Semantic Wrappers') that reduced incorrect outputs by ~90% and implemented grounding pipelines for automated compliance validation.",
+        tech: ["C#", ".NET", "Revit API", "OpenAI", "LangChain", "Tool Orchestration"],
+        category: "AI / ML",
+        aiBadge: true,
+        status: "Complete",
+        github: "https://github.com/rom812/AskRVT",
+        demo: null,
+      },
+      {
+        title: "CareerAssist — AI Career Advisor",
+        description:
+          "Built an AI-powered career assistant that provides personalised job-search guidance, resume feedback, and interview preparation using RAG pipelines over curated career resources.",
+        tech: ["Python", "FastAPI", "OpenAI", "RAG", "PostgreSQL"],
+        category: "AI / ML",
+        aiBadge: true,
+        status: "Complete",
+        github: "https://github.com/rom812/CareerAssist",
+        demo: null,
+      },
+      {
+        title: "Study Pal — AI Study Assistant",
+        description:
+          "Developed an intelligent study companion that helps students organise material, generate practice questions, and track learning progress through conversational AI interfaces.",
+        tech: ["Python", "OpenAI", "RAG Pipelines", "Flask"],
+        category: "AI / ML",
+        aiBadge: true,
+        status: "Complete",
+        github: "https://github.com/rom812/study-pal",
+        demo: null,
+      },
+      {
+        title: "Spotify Hit Predictor — ML Model",
+        description:
+          "Built a machine learning classification model that predicts whether a song will become a Spotify hit based on audio features, achieving high accuracy through feature engineering and model tuning.",
+        tech: ["Python", "Jupyter", "Pandas", "scikit-learn", "Matplotlib"],
+        category: "AI / ML",
+        aiBadge: true,
+        status: "Complete",
+        github: "https://github.com/rom812/Spotify-Popularity-Predictive-Model",
+        demo: null,
+      },
+      {
+        title: "Etza Academit — Academic Platform",
+        description:
+          "A full-stack academic platform built with TypeScript and modern web technologies, providing tools for academic collaboration and resource management.",
+        tech: ["TypeScript", "Node.js", "Vue", "Express.js"],
+        category: "Full-Stack",
+        aiBadge: false,
+        status: "Complete",
+        github: "https://github.com/rom812/etza-academit-ai",
+        demo: null,
+      },
+      {
+        title: "Maze Solver — Search Algorithms",
+        description:
+          "Implemented and visualised classic search algorithms (BFS, DFS, A*) for maze generation and solving. Built a client-server architecture with multithreaded processing and compression.",
+        tech: ["Java", "Multithreading", "Client-Server", "Algorithms"],
+        category: "Academic",
+        aiBadge: false,
+        status: "Complete",
+        github: "https://github.com/rom812/ATP-Project",
+        demo: null,
+      },
+    ];
+
+    const filteredProjects = computed(() => {
+      if (activeFilter.value === "All") return projects;
+      return projects.filter((p) => p.category === activeFilter.value);
+    });
+
+    function setFilter(cat) {
+      activeFilter.value = cat;
+      // Re-animate cards on filter change
+      setTimeout(() => {
+        const cards = projectGrid.value?.querySelectorAll(".project-card");
+        if (cards && cards.length) {
+          gsap.from(cards, {
+            y: 30,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: "power2.out",
+          });
+        }
+      }, 10);
+    }
+
+    // Reset refs before each update so v-for refs don't accumulate
+    onBeforeUpdate(() => {
+      projectRefs.value = [];
+    });
+
+    onMounted(() => {
+      if (sectionTitle.value) {
+        fadeInUp(sectionTitle.value);
+      }
+      if (sectionDescription.value) {
+        fadeInUp(sectionDescription.value, 0.1);
+      }
+      if (filterButtons.value) {
+        gsap.from(filterButtons.value.children, {
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: filterButtons.value,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+
+      // Stagger project cards
+      setTimeout(() => {
+        const cards = projectGrid.value?.querySelectorAll(".project-card");
+        if (cards && cards.length) {
+          gsap.from(cards, {
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: projectGrid.value,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          });
+        }
+      }, 50);
+    });
+
+    return {
+      sectionTitle,
+      sectionDescription,
+      filterButtons,
+      projectGrid,
+      projectRefs,
+      activeFilter,
+      categories,
+      filteredProjects,
+      setFilter,
+    };
+  },
 };
 </script>

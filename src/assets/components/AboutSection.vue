@@ -1,14 +1,14 @@
 <template>
   <section id="about">
-    <h2 class="animate-fade-in-up">Profile Snapshot</h2>
-    <p class="animate-fade-in-up delay-100">
+    <h2 ref="sectionTitle">Profile Snapshot</h2>
+    <p ref="sectionDescription">
       Detail-oriented builder who enjoys turning complex backend and AI
       challenges into dependable products. I draw on a solid foundation in
       computer science fundamentals, data-driven experimentation, and
       cross-functional teamwork to ship solutions that scale gracefully.
     </p>
-    <div class="grid grid-cols-2">
-      <article class="card animate-subtle-scale delay-200">
+    <div class="grid grid-cols-2" ref="aboutGrid">
+      <article class="card" ref="card1">
         <h3>Professional Experience</h3>
         <ul class="container">
           <li>
@@ -49,7 +49,7 @@
           </li>
         </ul>
       </article>
-      <article class="card animate-subtle-scale delay-300">
+      <article class="card" ref="card2">
         <h3>Education & Languages</h3>
         <ul class="container">
           <li>
@@ -67,7 +67,7 @@
           </li>
         </ul>
       </article>
-      <article class="card animate-subtle-scale delay-400">
+      <article class="card" ref="card3">
         <h3>Technical Toolbox</h3>
         <div class="skills-list">
           <span class="skill-pill">Python</span>
@@ -105,7 +105,7 @@
           <span class="skill-pill">Postman</span>
         </div>
       </article>
-      <article class="card animate-subtle-scale delay-500">
+      <article class="card" ref="card4">
         <h3>Key Highlights</h3>
         <ul class="container">
           <li>
@@ -131,7 +131,7 @@
           </li>
         </ul>
       </article>
-      <article class="card animate-subtle-scale delay-600">
+      <article class="card" ref="card5">
         <h3>Community & Engagement</h3>
         <ul class="container">
           <li>
@@ -159,7 +159,89 @@
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
+import { useGSAP } from "@/composables/useGSAP";
+import { gsap } from "gsap";
+
 export default {
   name: "AboutSection",
+  setup() {
+    const sectionTitle = ref(null);
+    const sectionDescription = ref(null);
+    const aboutGrid = ref(null);
+    const card1 = ref(null);
+    const card2 = ref(null);
+    const card3 = ref(null);
+    const card4 = ref(null);
+    const card5 = ref(null);
+    
+    const { fadeInUp } = useGSAP();
+
+    onMounted(() => {
+      // Animate section title and description
+      if (sectionTitle.value) {
+        fadeInUp(sectionTitle.value);
+      }
+      if (sectionDescription.value) {
+        fadeInUp(sectionDescription.value, 0.1);
+      }
+
+      // Stagger cards animation
+      const cards = [
+        card1.value,
+        card2.value,
+        card3.value,
+        card4.value,
+        card5.value,
+      ].filter(Boolean);
+
+      if (cards.length > 0) {
+        gsap.from(cards, {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: aboutGrid.value,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        });
+
+        // Enhanced hover effects for skill pills
+        const skillPills = document.querySelectorAll('.skill-pill');
+        skillPills.forEach((pill) => {
+          pill.addEventListener('mouseenter', () => {
+            gsap.to(pill, {
+              scale: 1.1,
+              y: -3,
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          });
+          pill.addEventListener('mouseleave', () => {
+            gsap.to(pill, {
+              scale: 1,
+              y: 0,
+              duration: 0.3,
+              ease: 'power2.out',
+            });
+          });
+        });
+      }
+    });
+
+    return {
+      sectionTitle,
+      sectionDescription,
+      aboutGrid,
+      card1,
+      card2,
+      card3,
+      card4,
+      card5,
+    };
+  },
 };
 </script>
