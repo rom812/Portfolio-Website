@@ -6,24 +6,11 @@
       generative AI, and building products that solve real problems.
     </p>
 
-    <div class="filter-buttons" ref="filterButtons">
-      <button
-        v-for="cat in categories"
-        :key="cat"
-        class="filter-btn"
-        :class="{ active: activeFilter === cat }"
-        @click="setFilter(cat)"
-      >
-        {{ cat }}
-      </button>
-    </div>
-
     <div class="grid grid-cols-3" ref="projectGrid">
       <article
-        v-for="project in filteredProjects"
+        v-for="project in projects"
         :key="project.title"
         class="card project-card"
-        :ref="(el) => el && projectRefs.push(el)"
       >
         <div class="card-header">
           <h3>{{ project.title }}</h3>
@@ -62,7 +49,7 @@
 </template>
 
 <script>
-import { ref, computed, onMounted, onBeforeUpdate } from "vue";
+import { ref, onMounted } from "vue";
 import { useGSAP } from "@/composables/useGSAP";
 import { gsap } from "gsap";
 
@@ -71,14 +58,9 @@ export default {
   setup() {
     const sectionTitle = ref(null);
     const sectionDescription = ref(null);
-    const filterButtons = ref(null);
     const projectGrid = ref(null);
-    const projectRefs = ref([]);
-    const activeFilter = ref("All");
 
     const { fadeInUp } = useGSAP();
-
-    const categories = ["All", "AI / ML", "Full-Stack"];
 
     const projects = [
       {
@@ -127,33 +109,6 @@ export default {
       },
     ];
 
-    const filteredProjects = computed(() => {
-      if (activeFilter.value === "All") return projects;
-      return projects.filter((p) => p.category === activeFilter.value);
-    });
-
-    function setFilter(cat) {
-      activeFilter.value = cat;
-      // Re-animate cards on filter change
-      setTimeout(() => {
-        const cards = projectGrid.value?.querySelectorAll(".project-card");
-        if (cards && cards.length) {
-          gsap.from(cards, {
-            y: 30,
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.08,
-            ease: "power2.out",
-          });
-        }
-      }, 10);
-    }
-
-    // Reset refs before each update so v-for refs don't accumulate
-    onBeforeUpdate(() => {
-      projectRefs.value = [];
-    });
-
     onMounted(() => {
       if (sectionTitle.value) {
         fadeInUp(sectionTitle.value);
@@ -161,21 +116,6 @@ export default {
       if (sectionDescription.value) {
         fadeInUp(sectionDescription.value, 0.1);
       }
-      if (filterButtons.value) {
-        gsap.from(filterButtons.value.children, {
-          opacity: 0,
-          y: 20,
-          duration: 0.6,
-          stagger: 0.08,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: filterButtons.value,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        });
-      }
-
       // Stagger project cards
       setTimeout(() => {
         const cards = projectGrid.value?.querySelectorAll(".project-card");
@@ -199,13 +139,8 @@ export default {
     return {
       sectionTitle,
       sectionDescription,
-      filterButtons,
       projectGrid,
-      projectRefs,
-      activeFilter,
-      categories,
-      filteredProjects,
-      setFilter,
+      projects,
     };
   },
 };
