@@ -56,21 +56,17 @@ export default {
         fadeInUp(sectionDescription.value, 0.1);
       }
       if (contactLinks.value) {
+        // Animate links in with a simple delayed stagger (no ScrollTrigger)
         gsap.fromTo(contactLinks.value.children, {
           opacity: 0,
-          y: 30,
+          y: 20,
         }, {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          delay: 0.2,
+          duration: 0.6,
+          delay: 0.3,
           stagger: 0.1,
           ease: 'power3.out',
-          scrollTrigger: {
-            trigger: contactLinks.value,
-            start: 'top 95%',
-            toggleActions: 'play none none none',
-          },
         });
 
         // Enhanced hover effects for contact links
