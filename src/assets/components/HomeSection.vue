@@ -43,7 +43,7 @@ export default {
     const heroImage = ref(null);
     
     const { mouseX, mouseY } = useMouseParallax();
-    const { fadeInUp, fadeIn } = useGSAP();
+    useGSAP();
 
     // Parallax effect for hero image
     const imageStyle = computed(() => {

@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
 import AppNavbar from "./assets/components/Navbar.vue";
 import HomeSection from "./assets/components/HomeSection.vue";
 import AboutSection from "./assets/components/AboutSection.vue";
