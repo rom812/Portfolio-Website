@@ -905,7 +905,8 @@ footer {
 
 .twin-card iframe {
   width: 100%;
-  height: 600px;
+  height: 80vh;
+  min-height: 700px;
   border: none;
   display: block;
   border-radius: 1rem;
@@ -913,6 +914,7 @@ footer {
 
 @media (max-width: 767px) {
   .twin-card iframe {
-    height: 500px;
+    height: 85vh;
+    min-height: 500px;
   }
 }
