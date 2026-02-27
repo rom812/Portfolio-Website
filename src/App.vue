@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <CursorFollower />
-    <DigitalTwinWidget />
     <AppNavbar />
     <main>
       <HomeSection />
       <AboutSection />
       <ProjectsSection />
+      <DigitalTwinSection />
       <ContactSection />
     </main>
   </div>
@@ -19,7 +19,7 @@ import AboutSection from "./assets/components/AboutSection.vue";
 import ProjectsSection from "./assets/components/ProjectsSection.vue";
 import ContactSection from "./assets/components/ContactSection.vue";
 import CursorFollower from "./components/CursorFollower.vue";
-import DigitalTwinWidget from "./components/DigitalTwinWidget.vue";
+import DigitalTwinSection from "./assets/components/DigitalTwinSection.vue";
 import { useSmoothScroll } from "./composables/useSmoothScroll";
 
 export default {
@@ -31,7 +31,7 @@ export default {
     ProjectsSection,
     ContactSection,
     CursorFollower,
-    DigitalTwinWidget,
+    DigitalTwinSection,
   },
   setup() {
     // Initialize smooth scrolling

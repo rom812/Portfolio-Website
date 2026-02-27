@@ -44,6 +44,7 @@ export default {
       { id: "home", label: "Home" },
       { id: "about", label: "About" },
       { id: "projects", label: "Projects" },
+      { id: "digital-twin", label: "Digital Twin" },
       { id: "contact", label: "Contact" },
     ];
 
