@@ -78,18 +78,29 @@ export default {
 
     const { fadeInUp } = useGSAP();
 
-    const categories = ["All", "AI / ML", "Full-Stack", "Academic"];
+    const categories = ["All", "AI / ML", "Full-Stack"];
 
     const projects = [
       {
-        title: "AskRVT — AI-Powered BIM Assistant",
+        title: "Digital Twin — AI Interview Assistant",
         description:
-          "Architected an AI assistant enabling natural-language interaction with complex Revit BIM models. Built C# middleware ('Semantic Wrappers') that reduced incorrect outputs by ~90% and implemented grounding pipelines for automated compliance validation.",
-        tech: ["C#", ".NET", "Revit API", "OpenAI", "LangChain", "Tool Orchestration"],
+          "A full-stack AI-powered digital twin that represents me professionally on my portfolio. Recruiters chat with an AI agent grounded in my CV and work history — it never improvises or halluccinates. Features visual context panels (career timeline, project cards, skill radar) and persistent conversation memory.",
+        tech: ["Next.js", "FastAPI", "AWS Bedrock", "S3", "Lambda", "CloudFront", "Terraform"],
+        category: "Full-Stack",
+        aiBadge: true,
+        status: "Complete",
+        github: "https://github.com/rom812/twin",
+        demo: "https://d2ckx9q1w19fw1.cloudfront.net/",
+      },
+      {
+        title: "Study Pal — AI Multimodal Study Companion",
+        description:
+          "An autonomous study mentor built on LangGraph with a multi-agent architecture. Six specialised agents collaborate to plan lessons, deliver RAG-powered tutoring, detect knowledge gaps, schedule Pomodoro sessions via Google Calendar, and keep motivation high with persona-aligned coaching.",
+        tech: ["Python", "LangGraph", "LangChain", "FastAPI", "Next.js", "ChromaDB", "OpenAI", "Docker"],
         category: "AI / ML",
         aiBadge: true,
         status: "Complete",
-        github: "https://github.com/rom812/AskRVT",
+        github: "https://github.com/rom812/study-pal",
         demo: null,
       },
       {
@@ -104,17 +115,6 @@ export default {
         demo: null,
       },
       {
-        title: "Study Pal — AI Study Assistant",
-        description:
-          "Developed an intelligent study companion that helps students organise material, generate practice questions, and track learning progress through conversational AI interfaces.",
-        tech: ["Python", "OpenAI", "RAG Pipelines", "Flask"],
-        category: "AI / ML",
-        aiBadge: true,
-        status: "Complete",
-        github: "https://github.com/rom812/study-pal",
-        demo: null,
-      },
-      {
         title: "Spotify Hit Predictor — ML Model",
         description:
           "Built a machine learning classification model that predicts whether a song will become a Spotify hit based on audio features, achieving high accuracy through feature engineering and model tuning.",
@@ -123,28 +123,6 @@ export default {
         aiBadge: true,
         status: "Complete",
         github: "https://github.com/rom812/Spotify-Popularity-Predictive-Model",
-        demo: null,
-      },
-      {
-        title: "Etza Academit — Academic Platform",
-        description:
-          "A full-stack academic platform built with TypeScript and modern web technologies, providing tools for academic collaboration and resource management.",
-        tech: ["TypeScript", "Node.js", "Vue", "Express.js"],
-        category: "Full-Stack",
-        aiBadge: false,
-        status: "Complete",
-        github: "https://github.com/rom812/etza-academit-ai",
-        demo: null,
-      },
-      {
-        title: "Maze Solver — Search Algorithms",
-        description:
-          "Implemented and visualised classic search algorithms (BFS, DFS, A*) for maze generation and solving. Built a client-server architecture with multithreaded processing and compression.",
-        tech: ["Java", "Multithreading", "Client-Server", "Algorithms"],
-        category: "Academic",
-        aiBadge: false,
-        status: "Complete",
-        github: "https://github.com/rom812/ATP-Project",
         demo: null,
       },
     ];
